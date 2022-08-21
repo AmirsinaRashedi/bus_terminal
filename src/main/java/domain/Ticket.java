@@ -28,11 +28,11 @@ public class Ticket extends BaseEntity<Long> {
         this.passenger = passenger;
     }
 
-    public Bus getFlight() {
+    public Bus getBus() {
         return bus;
     }
 
-    public void setFlight(Bus bus) {
+    public void setBus(Bus bus) {
         this.bus = bus;
     }
 
