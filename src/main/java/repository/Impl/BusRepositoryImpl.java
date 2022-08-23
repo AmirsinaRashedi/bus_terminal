@@ -31,7 +31,7 @@ public class BusRepositoryImpl extends BaseRepositoryImpl<Bus, Long>
 
     @Override
     public List<Bus> findWithOriginAndDestinationAndDate(String origin, String destination, LocalDate departureDate) {
-        return em.createQuery("select b from Bus b where b.origin = :origin and b.destination = :destination and b.departureDate = :date", Bus.class)
+        return em.createQuery("select b from Bus b where b.origin = :origin and b.destination = :destination and b.departureDate = :date order by b.departureTime ASC ", Bus.class)
                 .setParameter("origin", origin)
                 .setParameter("destination", destination)
                 .setParameter("date", departureDate)
