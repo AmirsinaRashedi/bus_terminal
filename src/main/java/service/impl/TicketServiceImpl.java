@@ -105,7 +105,7 @@ public class TicketServiceImpl extends BaseServiceImpl<Ticket, Long, TicketRepos
     }
 
     @Override
-    public boolean buyTicket(Passenger passenger, Bus boughtBus) {
+    public boolean buyTicket(Passenger passenger, Bus boughtBus, char gender) {
 
         if (boughtBus == null || passenger == null)
             return false;
@@ -115,6 +115,8 @@ public class TicketServiceImpl extends BaseServiceImpl<Ticket, Long, TicketRepos
         newTicket.setPassenger(passenger);
 
         newTicket.setBus(boughtBus);
+
+        newTicket.setGender(gender);
 
         save(newTicket);
 

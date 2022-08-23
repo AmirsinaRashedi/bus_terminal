@@ -13,6 +13,6 @@ public interface TicketService extends BaseService<Ticket, Long> {
 
     boolean buyTicket(Passenger passenger);
 
-    boolean buyTicket(Passenger passenger, Bus boughtBus);
+    boolean buyTicket(Passenger passenger, Bus boughtBus, char gender);
 
 }
